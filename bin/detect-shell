@@ -1,0 +1,20 @@
+#!perl
+
+use Shell::Detect::Env qw(detect_shell);
+
+my $res = detect_shell();
+if ($res) {
+    for (sort keys %$res) {
+        print "$_\t$res->{$_}\n";
+    }
+    exit 0;
+} else {
+    exit 1;
+}
+
+# ABSTRACT: Detect what shell we are running under
+
+=head1 SYNOPSIS
+
+ % detect-shell
+ bash
