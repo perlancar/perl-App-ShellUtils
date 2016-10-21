@@ -1,0 +1,19 @@
+#!perl
+
+use Shell::Guess;
+
+my $shell = Shell::Guess->running_shell;
+print $shell->name, "\n";
+
+# ABSTRACT: Detect what shell we are running under
+# PODNAME:
+
+=head1 SYNOPSIS
+
+ % guess-shell
+ bash
+
+
+=head1 SEE ALSO
+
+See L<Shell::Guess> for more details on supported shells and limitations.
